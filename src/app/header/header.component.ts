@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  collapsed = true;
+}
