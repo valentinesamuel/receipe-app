@@ -15,9 +15,14 @@ export class RecipeListComponent implements OnInit {
     ),
     new Recipe(
       'A second Recipe',
-      'This is another description',
+      'This is a second description',
       'https://www.easypeasyfoodie.com/wp-content/uploads/2019/05/IMG_5352-5.jpg'
-    )
+    ),
+    new Recipe(
+      'A third Recipe',
+      'Created by me',
+      'https://images.unsplash.com/photo-1606150653310-c285a8829d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+    ),
   ];
   constructor() {}
 
