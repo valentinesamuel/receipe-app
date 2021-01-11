@@ -29,7 +29,7 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  sddIngredientsToShoppingList(ingredients: Ingredient[]) {
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }
 }
