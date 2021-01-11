@@ -14,7 +14,7 @@ export class RecipeService {
     new Recipe(
       'Pizza',
       'This is a desctiption',
-      'https://joyfoodsunshine.com/wp-content/uploads/2016/09/easy-pizza-casserole-recipe-5.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg',
       [new Ingredient('Meat', 1), new Ingredient('Dough', 20)]
     ),
     new Recipe(
