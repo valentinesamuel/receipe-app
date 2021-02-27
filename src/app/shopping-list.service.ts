@@ -13,11 +13,11 @@ export class ShoppingListService {
     new Ingredient('Apple', 12),
     new Ingredient('Tomatoes', 23),
   ];
-  constructor() {}
+  constructor() { }
 
-getIngredient(index:number){
-  return this.ingredients[index];
-}
+  getIngredient(index: number) {
+    return this.ingredients[index];
+  }
 
   getIngredients() {
     return this.ingredients.slice();
@@ -31,5 +31,15 @@ getIngredient(index:number){
   addIngredients(ingredients: Ingredient[]) {
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  deleteIngredient(index: number) {
+    this.ingredients.splice(index, 1);
+    this.ingredientsChanged.next(this.ingredients.slice())
   }
 }
