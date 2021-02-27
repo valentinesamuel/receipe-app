@@ -7,12 +7,17 @@ import { Ingredient } from './shared/ingredients.model';
 })
 export class ShoppingListService {
   ingredientsChanged = new Subject<Ingredient[]>();
+  startedEditing = new Subject<number>();
 
   private ingredients: Ingredient[] = [
     new Ingredient('Apple', 12),
     new Ingredient('Tomatoes', 23),
   ];
   constructor() {}
+
+getIngredient(index:number){
+  return this.ingredients[index];
+}
 
   getIngredients() {
     return this.ingredients.slice();
