@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "receipe-app"
+  "defaultProject": "receipe-app",
+  "cli": {
+    "analytics": false
+  }
 }

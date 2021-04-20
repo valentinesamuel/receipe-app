@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   templateUrl: './header.component.html',
@@ -7,21 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
-
+  constructor(private dataStorage:DataStorageService) {}
   collapsed = true;
-
-  @Output() featureSelected = new EventEmitter<string>();
-
-  // onSelect(feature: string) {
-  //   this.featureSelected.emit(feature);
-  // }
-
-  toRecipes() {
-    this.router.navigate(['/recipes']);
-  }
-
-  toShoppingList() {
-    this.router.navigate(['/shopping-list']);
-  }
+  onSaveData() {
+    this.dataStorage.storeRecipes();
+ }
 }
