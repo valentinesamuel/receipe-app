@@ -12,5 +12,9 @@ export class HeaderComponent {
   collapsed = true;
   onSaveData() {
     this.dataStorage.storeRecipes();
- }
+  }
+  
+  onFetchRecipe() {
+    this.dataStorage.fetchRecipes().subscribe();
+  }
 }
